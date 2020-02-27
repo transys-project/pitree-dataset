@@ -18,16 +18,16 @@ The units of timestamp and bandwidth are *second* and *Mbps*.
 
 The dataset could be directly downloaded with [this link](hd_sim.zip).
 
-=== Mahimahi
+### Mahimahi
 
 The size of the [Mahimahi](https://mahimahi.mit.edu)-format traces is too large. Therefore, we provide a [script](sim2mahimahi.py) to convert the sim-format traces to mahimahi-format.
 
+Usage of sim2mahimahi.py:
 ~~~
-{Usage of sim2mahimahi.py}{}
 python sim2mahimahi.py -i hd_sim/ghent/ -o hd_mahimahi/ghent/
 ~~~
 
-== Statistics
+## Statistics
 
 <img src="../img/hd-trace-avg.png" width="440" height="300"><img src="../img/hd-trace-std.png" width="440" height="300">
 
