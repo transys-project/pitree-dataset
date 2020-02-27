@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:scte35="http://www.scte.org/schemas/35/2014SCTE35.xsd" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011,http://dashif.org/guidelines/dash264" type="static" minBufferTime="PT1.500S" maxSegmentDuration="PT0H0M4.000S" availabilityStartTime="2016-01-20T21:10:02Z" mediaPresentationDuration="PT0H4M59.984S">
+    <Period id="period0">
+        <AdaptationSet mimeType="video/mp4" segmentAlignment="true" startWithSAP="1" maxWidth="3840" maxHeight="2160" maxFrameRate="60" par="16:9" lang="und">
+            <SegmentTemplate timescale="92160" initialization="video$RepresentationID$/video$RepresentationID$_dashinit.mp4" media="video$RepresentationID$/video$RepresentationID$_dash$Number$.m4s" startNumber="1" duration="345306" presentationTimeOffset="0" />
+            <Representation id="1" bandwidth="43855652" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+            <Representation id="2" bandwidth="19269570" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+            <Representation id="3" bandwidth="9026833" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+            <Representation id="4" bandwidth="5459737" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+            <Representation id="5" bandwidth="2737377" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+            <Representation id="6" bandwidth="1127690" codecs="avc1.640034" width="3840" height="2160" frameRate="60" sar="1:1" scanType="progressive" />
+        </AdaptationSet>
+    </Period>
+</MPD>
