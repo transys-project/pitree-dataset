@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<link rel="stylesheet" href="https://zilimeng.com/jemdoc.css" type="text/css" />
+<title>PiTree Traces</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">PiTree Dataset</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="traces/index.html" class="current">Traces</a></div>
+<div class="menu-item"><a href="video/index.html">Video</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>PiTree Traces</h1>
+</div>
+<h2>About</h2>
+<p>We provide four sets of traces for the emulation:</p>
+<ol>
+<li><p><b>FCC18</b> is the measurement results of the broadband network in 2018 provided by FCC, with a median bandwidth improvement by 4.04x compared to 2016. (<a href="https://www.fcc.gov/reports-research/reports/measuring-broadband-america/">origin</a>)</p>
+</li>
+<li><p><b>HSR</b>. We adopt the 4G measurements on high-speed rails in 2018 to construct a scenario with violently fluctuating 4G bandwidths. (<a href="https://github.com/superlitong/hsr_mptcp">origin</a>)</p>
+</li>
+<li><p><b>Ghent</b>. We use the 4G measurements on foot, bicycle, bus, tram, train, and car in 2016 by Ghent University, which are moderately fluctuating 4G bandwidths. (<a href="https://users.ugent.be/~jvdrhoof/dataset-4g/">origin</a>)</p>
+</li>
+<li><p><b>Lab</b>. Finally, we also measure the indoor 4G bandwidth during the period of 2019-07-02 to 2019-08-15. To ensure the comprehensiveness of the dataset, we interchangeably use four congestion control algorithms (BBR, Cubic, Vegas, and HighSpeed). The indoor traces construct a scenario with gently fluctuating 4G bandwidths.</p>
+</li>
+</ol>
+<h2>Format</h2>
+<h3>Simulation</h3>
+<p>Each line of the file is in the following format:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+timestamp bandwidth
+</pre></div></div>
+<p>The units of timestamp and bandwidth are <i>second</i> and <i>Mbps</i>.</p>
+<p>The dataset could be directly downloaded with <a href="hd_sim.zip">this link</a>.</p>
+<h3>Mahimahi</h3>
+<p>The size of the <a href="https://mahimahi.mit.edu">Mahimahi</a>-format traces is too large. Therefore, we provide a <a href="sim2mahimahi.py">script</a> to convert the sim-format traces to mahimahi-format.</p>
+<div class="codeblock">
+<div class="blocktitle">Usage of sim2mahimahi.py</div>
+<div class="blockcontent"><pre>
+python sim2mahimahi.py -i hd_sim/ghent/ -o hd_mahimahi/ghent/
+</pre></div></div>
+<h2>Statistics</h2>
+<img src="img/hd-trace-avg.png" width="440" height="300"><img src="img/hd-trace-std.png" width="440" height="300">
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-02-26, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

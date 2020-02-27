@@ -8,6 +8,9 @@ MBPS_PER_PKTMS = 12.0
 
 
 def main(args):
+	if not os.path.isdir(args.out_dir):
+		os.mkdir(args.out_dir)
+	
 	files = os.listdir(args.in_dir)
 	for trace_file in files:
 		if os.stat(os.path.join(args.in_dir, trace_file)).st_size >= FILE_SIZE:
